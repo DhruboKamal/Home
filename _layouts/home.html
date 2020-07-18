@@ -7,7 +7,6 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -34,6 +33,12 @@ layout: default
           <span class="sr-only">Next</span>
       </a>
   </div>
+
+
+
+
+  {{ content }}
+
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}

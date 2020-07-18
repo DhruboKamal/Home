@@ -22,7 +22,7 @@ title: Official Site of Dhrubo kamal
 email: mmkdhrubo@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I have created this site to learn how to generate static sites usig jekyll
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "Home" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dhrubokamal07
 github_username:  DhruboKamal

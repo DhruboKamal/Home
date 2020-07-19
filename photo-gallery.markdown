@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: page
+title: Image Gallery
 images:
   - image_path: /images/aus.jpg
     title: australs

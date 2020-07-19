@@ -10,5 +10,4 @@ Sometimes not getting the thing that we want is the greatest thing that that can
 
 Made a promise to myself. See you in Melbourne, 2021
 
-<img src="aus.jpg" alt="img"/>
-![image](/aus.jpg)
+<img src="/aus.jpg" alt="img"/>

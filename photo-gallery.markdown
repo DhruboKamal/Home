@@ -9,7 +9,7 @@ images:
 <ul class= "photo-galary">
   {% for image in page.images %}
     <li>
-        <img src="{{imgage.image_path}}" alt="{{image.title}}">
+        <img src="{{image.image_path}}" alt="{{image.title}}">
     </li>
 
   {% endfor %}

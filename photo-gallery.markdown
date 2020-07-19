@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Image Gallery
+permalink: /gallery/
 images:
   - image_path: /images/aus.jpg
     title: australs

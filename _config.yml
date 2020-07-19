@@ -29,6 +29,7 @@ github_username:  DhruboKamal
 facebook_username: mmk.dhrubo
 linkedin_username: mmkdhrubo
 # Build settings
+paginate: 5
 theme: minima
 plugins:
   - jekyll-feed

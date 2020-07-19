@@ -12,4 +12,4 @@ Made a promise to myself. See you in Melbourne, 2021
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="img1"/>
 
-<img src="home/Aditional/aus.jpg" alt="img2"/>
+<img src="/aus.jpg" alt="img2"/>

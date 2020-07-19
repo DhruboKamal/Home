@@ -3,7 +3,7 @@ layout: page
 title: Image Gallery
 permalink: /gallery/
 images:
-  - image_path: /images/aus.jpg
+  - image_path: /cca1.jpg
     title: australs
 ---
 <ul class= "photo-galary">

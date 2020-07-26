@@ -7,7 +7,7 @@ images:
     title: img
   - image_path: https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg
     title: img2
-  - image_path: /images/aus.jpg
+  - image_path: images/aus.jpg
     title: aus
 ---
 <style>

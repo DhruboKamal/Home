@@ -10,6 +10,19 @@ images:
   - image_path: /images/aus.jpg
     title: aus
 ---
+<style>
+    .photo-galary{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    img{
+        width: 450px;
+        height: 300px;
+        border: 1px;
+        margin: 10px;
+    }
+</style>
 <ul class= "photo-galary">
   {% for image in page.images %}
     <li>

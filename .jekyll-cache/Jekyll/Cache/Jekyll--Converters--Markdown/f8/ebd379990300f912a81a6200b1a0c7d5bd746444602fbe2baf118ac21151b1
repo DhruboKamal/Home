@@ -1,0 +1,19 @@
+I"<body>
+<!-- Gallery Begins -->
+    <h1> Gallery </h1>
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center">
+
+        
+              <img style="height: 240px;width: 320px;margin:10px; opacity: 0.9" src=" https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="..." />
+        
+              <img style="height: 240px;width: 320px;margin:10px; opacity: 0.9" src=" https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="..." />
+        
+              <img style="height: 240px;width: 320px;margin:10px; opacity: 0.9" src=" https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="..." />
+        
+              <img style="height: 240px;width: 320px;margin:10px; opacity: 0.9" src=" https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="..." />
+        
+
+    </div>
+    <!--Gallery Ends -->
+</body>
+:ET

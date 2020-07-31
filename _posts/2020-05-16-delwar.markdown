@@ -2,6 +2,8 @@
 layout: post
 title: "Justice for Engineer Delwar"
 Date: 2020-05-16 16:09:38 +0600
+desc: Statemanet after the brutal death of Engineer Delwar.
+thumbnail-url: ./assets/thumbnail2.jpg
 ---
 
 আমি মাহদী মুশফিক কামাল ,

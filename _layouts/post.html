@@ -12,7 +12,7 @@
     <style>
         body,
         html{
-            background: url(/assets/header.jpg) no-repeat center center fixed;
+            background: url({{"/assets/header.jpg"| relative_url}}) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -57,8 +57,8 @@
             flex:right;
         }
     </style>
-    <link rel="icon" href="assets/title.ico" type="image/ico">
-    <title>{{ site.title}} </title>
+    <link rel="icon" href="{{"assets/title.ico" | relative_url}}" type="image/ico">
+    <title>{{ page.title}} </title>
   </head>
 
   <body>
@@ -91,14 +91,6 @@
     <!-- End Nav -->
     <div class="Buffer"></div>
 
-
-    <div class="container">
-        <!-- Jumbotron Startes -->
-
-
-        <!-- Jumbotron ends -->
-    </div>
-
     <div class="container">
         <div class="jumbotron">
             <h3 class="display-4"> {{ page.title }} </h3>
@@ -119,7 +111,7 @@
             <div class="card-body">
                 <h5 class="card-title"> Thanks for reading </h5>
                 <p class="card-text"> Feel free to share the content.Use it or modify it.<small> @Fair use policy under the doctrain of Copyright Act of 1976, 17 U.S.C.</small> </p>
-                <a href="/blog.html" class="btn btn-primary">Go back to blogs</a>
+                <a href="{{"/blog.html"|relative_url}}" class="btn btn-primary">Go back to blogs</a>
             </div>
         </div>
     </div>

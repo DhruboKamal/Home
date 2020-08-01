@@ -95,7 +95,7 @@ title: hello world
             <p class="lead">I am Dhrubo Kamal. I study computer Science in Bangladesh University of Engineering and Technology.I have been active in many co-curricular activities in my school,college and university.I am in the debate circuit for 7+ years,which make me confident about my presentation skill.Programming is my passion,which encouraged me to study Computer Science. I like solving problems,innovating things. I want to be a part of the next tech-revolution.</p>
             <hr class="my-4">
             <p>I am heavily influenced by the life philosophy of Steve Jobs. </p>
-            <a class="btn btn-primary btn-lg" href="/aboutme/" role="button"> Get to know about me </a>
+            <a class="btn btn-primary btn-lg" href="{{ "/aboutme/" | relative_url }} role="button"> Get to know about me </a>
         </div>
         <!-- Jumbotron ends -->
     </div>
@@ -107,7 +107,7 @@ title: hello world
                 <div class="card-body">
                     <h5 class="card-title">Projects</h5>
                     <p class="card-text"><i> “Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.”</i></br> - Sir Henry Royce .</br>This portion of the website contains my term projects and ventures </p>
-                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="{{ "projects.html" | relative_url }}" class="btn btn-primary">View Projects</a>
                 </div>
             </div>
             <div class="card">
@@ -115,7 +115,7 @@ title: hello world
                 <div class="card-body">
                     <h5 class="card-title">Achievements</h5>
                     <p class="card-text">I have been debating since 2013.Also attended math olympiad and national high school programming contest. I was lucky enough to have a little success in these fields. This portion of the site contains those achievements. </p>
-                    <a href="/achievements/" class="btn btn-primary">View Achievements</a>
+                    <a href=" {{ "/achievements/" | relative_url }}" class="btn btn-primary">View Achievements</a>
                 </div>
             </div>
             <div class="card">
@@ -123,7 +123,7 @@ title: hello world
                 <div class="card-body">
                     <h5 class="card-title">Gallery</h5>
                     <p class="card-text"><i>“Photography is the story I fail to put into words.”</i> </br> — Destin Sparks </br> This portion of the websites contains some of those images which expresse a blast of emotions </p>
-                    <a href="/gallery/" class="btn btn-primary">View Gallery</a>
+                    <a href="{{ "/gallery/" | relative_url }}" class="btn btn-primary">View Gallery</a>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@ title: hello world
             </div>
             <div class="card-body">
                 <h4 class="card-title">Recent Blogs by Dhrubo Kamal </h4>
-                <p class="card-text">Here is a preview of the recent blogs </p>
+                <p class="card-text"> Here is a preview of the recent blogs </p>
                 <!-- Media Object Starts -->
                 {% for post in site.posts %}
                     <div class="media">
@@ -170,7 +170,7 @@ title: hello world
                     <hr>
                 {% endfor %}
                 <!-- Media Object Finished -->
-                <a href="#" class="btn btn-primary">View all the blogs </a>
+                <a href="{{ "/blog.html" | relative_url }}" class="btn btn-primary">View all the blogs </a>
             </div>
         </div>
 

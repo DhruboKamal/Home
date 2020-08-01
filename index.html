@@ -101,7 +101,7 @@ title: hello world
         <!-- Card Section -->
         <div class="card-deck">
             <div class="card">
-                <img src="{{" assets/info.png " | relative_url}}" class="card-img-top" alt="...">
+                <img src="{{ "assets/info.png" | relative_url }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Projects</h5>
                     <p class="card-text"><i> “Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.”</i></br> - Sir Henry Royce .</br>This portion of the website contains my term projects and ventures </p>
@@ -109,7 +109,7 @@ title: hello world
                 </div>
             </div>
             <div class="card">
-                <img src="{{" assets/achv.png | relative_url "}}" class="card-img-top" alt="...">
+                <img src="{{"assets/achv.png | relative_url "}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Achievements</h5>
                     <p class="card-text">I have been debating since 2013.Also attended math olympiad and national high school programming contest. I was lucky enough to have a little success in these fields. This portion of the site contains those achievements. </p>
@@ -180,11 +180,11 @@ title: hello world
         <div class="card">
             <div class="card-body">
                 <h3> Follow me on Social Media </h3>
-                <a href="https://www.facebook.com/mmk.dhrubo" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #3b5998 ;"> <img src="/assets/fb.png" alt="" width="25px" height="25px"> Facebook </button></a>
-                <a href="https://www.linkedin.com/in/mmkdhrubo/" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #0e76a8 ;"> <img src="/assets/li.png" alt="" width="25px" height="25px"> Linked-in </button></a>
-                <a href="https://www.youtube.com/channel/UCendCII-donK3yVKNIy3LFg" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #FF0000;"> <img src="/assets/yt.png" alt="" width="25px" height="25px"> YouTube </button></a>
-                <a href="https://github.com/DhruboKamal" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: white;color:black;"> <img src="/assets/gh.png" alt="" width="25px" height="25px"> Github </button></a>
-                <a href="https://twitter.com/dhrubokamal07" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #00acee;color:black;"> <img src="/assets/tw.png" alt="" width="25px" height="25px"> Twitter </button></a>
+                <a href="https://www.facebook.com/mmk.dhrubo" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #3b5998 ;"> <img src= "{{ "/assets/fb.png" | relative_url}}"  alt="" width="25px" height="25px"> Facebook </button></a>
+                <a href="https://www.linkedin.com/in/mmkdhrubo/" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #0e76a8 ;"> <img src="{{ "/assets/li.png" | relative_url}}" alt="" width="25px" height="25px"> Linked-in </button></a>
+                <a href="https://www.youtube.com/channel/UCendCII-donK3yVKNIy3LFg" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #FF0000;"> <img src="{{ "/assets/yt.png" | relative_url}}" alt="" width="25px" height="25px"> YouTube </button></a>
+                <a href="https://github.com/DhruboKamal" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: white;color:black;"> <img src="{{ "/assets/gh.png" | relative_url}}" alt="" width="25px" height="25px"> Github </button></a>
+                <a href="https://twitter.com/dhrubokamal07" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #00acee;color:black;"> <img src="{{ "/assets/tw.png" | relative_url}}" alt="" width="25px" height="25px"> Twitter </button></a>
             </div>
         </div>
     </div>

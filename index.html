@@ -55,8 +55,8 @@ title: hello world
             text-decoration: none;
         }
     </style>
-    <link rel="icon" href="assets/title.ico" type="image/ico">
-    <title>Official Page of Dhrubo Kamal </title>
+    <link rel="icon" href=" {{"assets/title.ico" | relative_url}}" type="image/ico">
+    <title> {{site.title}} </title>
   </head>
   <body>
     <!-- New Nav -->
@@ -93,8 +93,6 @@ title: hello world
         <div class="jumbotron">
             <h1 class="display-4"> Welcome To the site of Dhrubo Kamal </h1>
             <p class="lead">I am Dhrubo Kamal. I study computer Science in Bangladesh University of Engineering and Technology.I have been active in many co-curricular activities in my school,college and university.I am in the debate circuit for 7+ years,which make me confident about my presentation skill.Programming is my passion,which encouraged me to study Computer Science. I like solving problems,innovating things. I want to be a part of the next tech-revolution.</p>
-            <hr class="my-4">
-            <p>I am heavily influenced by the life philosophy of Steve Jobs. </p>
             <a class="btn btn-primary btn-lg" href="{{ "/aboutme/" | relative_url }}" role="button"> Get to know about me </a>
         </div>
         <!-- Jumbotron ends -->
@@ -103,7 +101,7 @@ title: hello world
         <!-- Card Section -->
         <div class="card-deck">
             <div class="card">
-                <img src="assets/info.png" class="card-img-top" alt="...">
+                <img src="{{" assets/info.png " | relative_url}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Projects</h5>
                     <p class="card-text"><i> “Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.”</i></br> - Sir Henry Royce .</br>This portion of the website contains my term projects and ventures </p>
@@ -111,7 +109,7 @@ title: hello world
                 </div>
             </div>
             <div class="card">
-                <img src="assets/achv.png" class="card-img-top" alt="...">
+                <img src="{{" assets/achv.png | relative_url "}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Achievements</h5>
                     <p class="card-text">I have been debating since 2013.Also attended math olympiad and national high school programming contest. I was lucky enough to have a little success in these fields. This portion of the site contains those achievements. </p>
@@ -119,7 +117,7 @@ title: hello world
                 </div>
             </div>
             <div class="card">
-                <img src="assets/gallery.png" class="card-img-top" alt="...">
+                <img src="{{ "assets/gallery.png" | relative_url}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Gallery</h5>
                     <p class="card-text"><i>“Photography is the story I fail to put into words.”</i> </br> — Destin Sparks </br> This portion of the websites contains some of those images which expresse a blast of emotions </p>
@@ -143,13 +141,13 @@ title: hello world
                 {% for post in site.posts %}
                     <div class="media">
                         {% if post.thumbnail-url != NIL %}
-                            <a href="{{ post.url }}"> <img src="{{ post.thumbnail-url }}" class="mr-3" alt="Sample Image" height="50px" width="50px"> <a>
+                            <a href="{{ post.url | relative_url }}"> <img src="{{ post.thumbnail-url }}" class="mr-3" alt="Sample Image" height="50px" width="50px"> <a>
                         {% elsif post.thumbnail-url == NIL %}
-                            <a href="{{ post.url }}"> <img src="assets/thumbnail.jpg" class="mr-3" alt="Sample Image" height="50px" width="50px"> <a>
+                            <a href="{{ post.url | relative_url }}"> <img src="assets/thumbnail.jpg" class="mr-3" alt="Sample Image" height="50px" width="50px"> <a>
                         {% endif %}
 
                         <div class="media-body">
-                            <h5 class="mt-0"> <a href="{{ post.url }}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small></h5>
+                            <h5 class="mt-0"> <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small></h5>
                             {% if post.desc != NIL %}
                                 <p> {{ post.desc }} </p>
                             {% elsif post.dec == NIL %}

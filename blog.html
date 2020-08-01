@@ -98,13 +98,13 @@
                 <!-- Media Object Starts -->
                 <div class="media">
                     {% if post.thumbnail-url != NIL %}
-                        <a href="{{ post.url }}"> <img src="{{ post.thumbnail-url }}" class="mr-3" alt="Sample Image" height="80px" width="80px"> <a>
+                        <a href="{{ post.url | relative_url }}"> <img src="{{ post.thumbnail-url }}" class="mr-3" alt="Sample Image" height="80px" width="80px"> <a>
                     {% elsif post.thumbnail-url == NIL %}
-                        <a href="{{ post.url }}"> <img src="assets/thumbnail.jpg" class="mr-3" alt="Sample Image" height="80px" width="80px"> <a>
+                        <a href="{{ post.url | relative_url }}"> <img src="assets/thumbnail.jpg" class="mr-3" alt="Sample Image" height="80px" width="80px"> <a>
                     {% endif %}
 
                     <div class="media-body">
-                        <h5 class="mt-0"> <a href="{{ post.url }}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small> </h5>
+                        <h5 class="mt-0"> <a href="{{ post.url | relative_url}}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small> </h5>
                         {% if post.desc != NIL %}
                         <p> <i> {{ post.desc }} </i></p>
                         {% elsif post.dec == NIL %}

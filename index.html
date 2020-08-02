@@ -20,7 +20,6 @@ title: hello world
             background-size: cover;
         }
         .container{
-            margin-top: 10px;
             background-color: rgba(233, 236, 239, 0.0);
         }
         .card-deck, .card-body{
@@ -38,7 +37,7 @@ title: hello world
             z-index: 100000;
 
         }
-        
+
         a:link {
             text-decoration: none;
         }
@@ -77,43 +76,21 @@ title: hello world
     <div class="Buffer"></div>
 
     <div class="container">
-        <!-- Jumbotron Startes -->
-        <div class="jumbotron">
-            <h1 class="display-4"> Welcome To the site of Dhrubo Kamal </h1>
-            <p class="lead">Pursuing BSc (Engineering) in CSE at Bangladesh University of Engineering and Technology.</p>
-            <a class="btn btn-primary btn-lg" href="{{ "/aboutme/" | relative_url }}" role="button"> Get to know about me </a>
-        </div>
-        <!-- Jumbotron ends -->
+      <h1 class="display-4"> Welcome To the site of Dhrubo Kamal </h1>
+      <p class="lead">Pursuing BSc (Engineering) in CSE at Bangladesh University of Engineering and Technology.</p>
+      <a class="btn btn-primary btn-lg" href="{{ "/aboutme/" | relative_url }}" role="button"> Get to know about me </a>
     </div>
+
     <div class="container">
-        <!-- Card Section -->
-        <div class="card-deck">
-            <div class="card">
-                <!-- img src="{{ "assets/info.png" | relative_url }}" class="card-img-top" alt="..." -->
-                <div class="card-body">
-                    <h5 class="card-title">Projects</h5>
-                    <p class="card-text"><i> “Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.”</i></br> - Sir Henry Royce .</br>This portion of the website contains my term projects and ventures </p>
-                    <a href= "{{ "projects.html" | relative_url }}" class="btn btn-primary">View Projects</a>
-                </div>
-            </div>
-            <div class="card">
-                <!-- img src="{{"assets/achv.png" | relative_url }}" class="card-img-top" alt="..." -->
-                <div class="card-body">
-                    <h5 class="card-title">Achievements</h5>
-                    <p class="card-text">I have been debating since 2013.Also attended math olympiad and national high school programming contest. I was lucky enough to have a little success in these fields. This portion of the site contains those achievements. </p>
-                    <a href=  "{{ "/achievements/" | relative_url }}"  class="btn btn-primary">View Achievements</a>
-                </div>
-            </div>
-            <div class="card">
-                <!-- img src="{{ "assets/gallery.png" | relative_url}}" class="card-img-top" alt="..." -->
-                <div class="card-body">
-                    <h5 class="card-title">Gallery</h5>
-                    <p class="card-text"><i>“Photography is the story I fail to put into words.”</i> </br> — Destin Sparks </br> This portion of the websites contains some of those images which expresse a blast of emotions </p>
-                    <a href="{{ "/gallery/" | relative_url }}" class="btn btn-primary">View Gallery</a>
-                </div>
-            </div>
-        </div>
-        <!-- card Ends -->
+      <h5 class="card-title">Projects</h5>
+      <p class="card-text"><i> “Strive for perfection in everything you do. Take the best that exists and make it better. When it does not exist, design it.”</i></br> - Sir Henry Royce .</br>This portion of the website contains my term projects and ventures </p>
+      <a href= "{{ "projects.html" | relative_url }}" class="btn btn-primary">View Projects</a>
+      <h5 class="card-title">Achievements</h5>
+      <p class="card-text">I have been debating since 2013.Also attended math olympiad and national high school programming contest. I was lucky enough to have a little success in these fields. This portion of the site contains those achievements. </p>
+      <a href=  "{{ "/achievements/" | relative_url }}"  class="btn btn-primary">View Achievements</a>
+      <h5 class="card-title">Gallery</h5>
+      <p class="card-text"><i>“Photography is the story I fail to put into words.”</i> </br> — Destin Sparks </br> This portion of the websites contains some of those images which expresse a blast of emotions </p>
+      <a href="{{ "/gallery/" | relative_url }}" class="btn btn-primary">View Gallery</a>
     </div>
 
     <!-- Blog Starts -->

@@ -1,6 +1,6 @@
 ---
+layout: default
 ---
-<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -10,101 +10,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
-        body,
-        html{
-            background: url({{"/assets/header.gif" | relative_url}}) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        .container{
-            margin-top: 20px;
-            background-color: rgba(233, 236, 239, 0.0);
-        }
-        .card-deck, .card-body{
-            background-color: rgba(233, 236, 239, 0.0);
-        }
-        .jumbotron, .card {
-            background-color: rgba(233, 236, 239, 0.95);
-            text-color: black;
-        }
-        .cus-nav{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 120%;
-            z-index: 100000;
-
-        }
-        .buffer{
-            height: 10rem;
-        }
         a:link {
             text-decoration: none;
         }
-        img{
-            width: 100%;
-            height: auto;
+        .page img{
+          width: 100%;
+          height: auto;
         }
-
     </style>
-    <link rel="icon" href="{{ "assets/title.ico" | relative_url}}" type="image/ico">
-    <title> {{ page.title }} </title>
+    <link rel="icon" href=" {{"assets/title.ico" | relative_url}}" type="image/ico">
   </head>
-
   <body>
-    <!-- New Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="{{"/index.html" | relative_url}}"> Site of Dhrubo Kamal </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/aboutme" | relative_url }} > Personal Info  <span class="sr-only">(current)</span> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/achievements" | relative_url }}> Achievements </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/blog.html" | relative_url }}> Blogs </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/projects.html" | relative_url }}> Projects </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/gallery" | relative_url }}> Gallary </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Nav -->
-    <div class="Buffer"></div>
-
-    <div class="container">
-        <!-- Jumbotron Startes -->
-        <div class="jumbotron">
-            <h1 class="display-4"> {{ page.title }} </h1>
-            {{ content }}
-        </div>
-        <!-- Jumbotron ends -->
+    <div class="buffer" style="height: 5rem;"></div>
+    <div class="container page">
+      {{content}}
     </div>
-    <!-- Footer starts -->
-    <div class="container">
-        <div class="card">
-            <div class="card-body logo">
-                <h3> Follow me on Social Media </h3>
-                <a href="https://www.facebook.com/mmk.dhrubo" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #3b5998 ;"> <img class="logo" src="/assets/fb.png" alt="" style="width:25px; height:25px;" > Facebook </button></a>
-                <a href="https://www.linkedin.com/in/mmkdhrubo/" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #0e76a8 ;"> <img src="/assets/li.png" alt="" style="width:25px; height:25px;"> Linked-in </button></a>
-                <a href="https://www.youtube.com/channel/UCendCII-donK3yVKNIy3LFg" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #FF0000;"> <img src="../assets/yt.png" alt="" style="width:25px; height:25px;"> YouTube </button></a>
-                <a href="https://github.com/DhruboKamal" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: white;color:black;"> <img src="/assets/gh.png" alt="" style="width:25px; height:25px;"> Github </button></a>
-                <a href="https://twitter.com/dhrubokamal07" target="_blank"> <button type="button" class="btn btn-secondary" style="background-color: #00acee;color:black;"> <img src="/assets/tw.png" alt="" style="width:25px; height:25px;"> Twitter </button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footed ends -->
-</body>
-</html>
+  </body>

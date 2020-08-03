@@ -1,4 +1,5 @@
 ---
+layout: default
 ---
 <!doctype html>
 <html lang="en">
@@ -9,111 +10,97 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <style>
-        body,
-        html{
-            background: url({{"/assets/header.gif"| relative_url}}) no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        .container{
-            width: 90%
-            margin-top: 20px;
-            background-color: rgba(233, 236, 239, 0.0);
-        }
-        .card-deck, .card-body{
-            background-color: rgba(233, 236, 239, 0.0);
-        }
-        .jumbotron, .card {
-            background-color: rgba(233, 236, 239, 0.95);
-            text-color: black;
-        }
-        .cus-nav{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 120%;
-            z-index: 100000;
 
-        }
-        .buffer{
-            height: 3rem;
-        }
-        a:link {
-            text-decoration: none;
-        }
-        img{
-            width: 100%;
-            height: auto;
-        }
-        .post-content{
-            width:75%;
-            flex: left;
-        }
-        .sidebar{
-            width:25%
-            flex:right;
-        }
-    </style>
-    <link rel="icon" href="{{"assets/title.ico" | relative_url}}" type="image/ico">
-    <title>{{ page.title}} </title>
+    <title>{{ page.title }}</title>
   </head>
 
   <body>
-    <!-- New Nav -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="{{"/index.html" | relative_url}}"> Site of Dhrubo Kamal </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/aboutme" | relative_url }} > Personal Info  <span class="sr-only">(current)</span> </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/achievements" | relative_url }}> Achievements </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/blog.html" | relative_url }}> Blogs </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/projects.html" | relative_url }}> Projects </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href= {{ "/gallery" | relative_url }}> Gallary </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- End Nav -->
-    <div class="Buffer"></div>
-
+    <div class="buffer" style="height: 5rem;"></div>
+    <!-- Page Content -->
     <div class="container">
-        <div class="jumbotron">
-            <h3 class="display-4"> {{ page.title }} </h3>
-            {% if page.author != NIL %}
-            <h5> Written by {{ page.author }} </h5>
-            {% endif %}
-            <h6>Posted on {{ page.date }}</h6>
+      <div class="row">
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+          <!-- Title -->
+          <h1 class="mt-4">{{ page.title }}</h1>
+          <!-- Author -->
+          {% if page.author != NIL %}
+            <p class="lead">
+              by <b> {{ page.author }} </b>
+            </p>
+          {% endif %}
+          <hr>
+          <!-- Date/Time -->
+          <p>Posted on {{ page.date }}</p>
+          <hr>
+          <!-- Preview Image -->
+          {% if page.image-url != NIL %}
+            <img class="img-fluid rounded" src="{{ page.image-url | relative_url}}" alt="">
             <hr>
-            <div class="buffer"></div>
-            {{ content }}
+          {% elsif page.image-url == NIL %}
+          <img class="img-fluid rounded" src="https://www.techbizlegal.com/wp-content/uploads/2015/11/blog-banner.jpg" alt="">
+          <hr>
+          {% endif  %}
+          <!-- Post Content -->
+          {{ content }}
+          <hr>
+
         </div>
-    </div>
-    <div class="container">
-        <div class="card">
-            <div class="card-header">
-                Featured
-            </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+          <!-- Categories Widget -->
+
+
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Post description</h5>
+            {% if page.desc!=NIL %}
+              <div class="card-body">
+                <p> {{page.desc}} </p>
+              </div>
+            {% elsif page.desc == NIL %}
+              <div class="card-body">
+                <p> No description is provided with the blog. </p>
+              </div>
+            {% endif %}
+            {% if page.time!=NIL %}
+              <div class="card-body">
+                <small> {{page.time}} minute read.</small>
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="card my-4">
+            <h5 class="card-header">Post Tags</h5>
             <div class="card-body">
-                <h5 class="card-title"> Thanks for reading </h5>
-                <p class="card-text"> Feel free to share the content.Use it or modify it.<small> @Fair use policy under the doctrain of Copyright Act of 1976, 17 U.S.C.</small> </p>
-                <a href="{{"/blog.html"|relative_url}}" class="btn btn-primary">Go back to blogs</a>
+              {% if page.tag-status != NIL %}
+              <div class="row row-cols-2">
+
+                  {% for tag in page.tags %}
+                    <col> <h5> <span class="badge badge-light"> {{ tag }} </span> </h5> </col>
+                    <!-- col> <p> {{ tag }} </p> </col -->
+                  {% endfor %}
+              </div>
+              {%elsif page.tags == empty%}
+                <p style = "text-align:center;"> <small> No tag is provided with the post. </small> </p>
+
+
+              {%endif%}
             </div>
+          </div>
+
         </div>
+
+      </div>
+      <!-- /.row -->
+
     </div>
-</body>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>

@@ -4,7 +4,7 @@ permalink: /achievements/
 layout: page
 ---
 
-<h2> Co-curricular Activity </h2>
+<h1> Co-curricular Activity </h1>
 <h4> Public Speaking </h4>
 <b>Champion</b> at <i>“National Energy Day-Speech Competition”</i>, awarded by the honorable president of Bangladesh <i>(2015)</i>.
 <br>

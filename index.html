@@ -11,10 +11,19 @@ layout: default
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style media="screen">
     html,body{
       height:100%;
       width: 100%;
+    }
+    p,a, ol li, ul li, h1,h2,h3,h4,h5,h6{
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h4{
+      color: #415C76;
+      font-size: 1.6rem;
     }
 
     #home{
@@ -26,7 +35,7 @@ layout: default
       background-size: cover;
     }
     .landing-text{
-      /* padding-right: 50%; */
+      padding-bottom: 0%;
       display: table-cell;
       text-align: center;
       vertical-align: middle;
@@ -36,7 +45,7 @@ layout: default
       font-size: 200%;
     }
     #fixed{
-      background:url({{"/assets/cover.jpg" | relative_url }}) no-repeat center center fixed;
+      background:url({{"/assets/cover2.jpg" | relative_url }}) no-repeat center bottom fixed;
       display: table;
       height: 30% ;
       position: relative;
@@ -55,9 +64,9 @@ layout: default
       <h5>Hello & welcome</h5>
       <h1> I'm <b>Mahdee Mushfique Kamal</b>. </h1>
       <br>
-      <a href="{{"/assets/MMK-cv.pdf" | relative_url}}" class="btn btn-default btn-lg" style="color:white;border-color: white;border-width:2px; border-radius: 50px"> Download CV </a>
+      <a href="{{"/assets/MMK-cv.pdf" | relative_url}}" class="btn btn-default btn-lg" style="color:white ;border-color: white ;border-width:2px; border-radius: 50px"> Download CV </a>
       </br>
-      <a href="#aboutme" style= "float:right"> <img src="{{ "/assets/down.png" | relative_url}}" style= " height:50px; width="50px; padding-right: 500px;"  alt=""> </a>
+      <a href="#aboutme" style= "float:right"> <img src="{{ "/assets/down.png" | relative_url}}" style= " height:50px; width=50px; "  alt=""> </a>
     </div>
   </div>
   <div class="buffer"  id="aboutme" style="height: 5rem;"></div>
@@ -99,55 +108,75 @@ layout: default
   <div class="buffer" style="height: 5rem;"></div>
   <div id="fixed"></div>
   <div class="buffer" style="height: 5rem;"></div>
+
   <!-- Blog Starts -->
   <div class="container">
     <div class=row>
       <div class="col-sm-8">
+        <h3> Blogs by Dhrubo Kamal </h3>
         <div class="card">
+          {% for post in site.posts %}
           <div class="card-body">
-            <h4 class="card-title">Recent Blogs by Dhrubo Kamal </h4>
-            <p class="card-text"> Here is a preview of the recent blogs </p>
-            <hr>
             <!-- Media Object Starts -->
-            {% for post in site.posts %}
             <div class="media">
-
-              <a href="{{ post.url | relative_url }}"> <img src="assets/thumbnail.jpg" class="mr-3" alt="Sample Image" height="50px" width="50px"> <a>
-
+              <a href="{{ post.url | relative_url }}"> <img src={{ "assets/thumbnail.jpg" | relative_url }} class="mr-3 rounded-circle" alt="Sample Image" height="80px" width="80px"> <a>
                 <div class="media-body">
-                  <h5 class="mt-0"> <a href="{{ post.url | relative_url }}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small></h5>
+                  <h5 class="mt-0"> <a href="{{ post.url | relative_url}}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small> </h5>
                   {% if post.desc != NIL %}
-                  <p> {{ post.desc }} </p>
+                  <p> <i> {{ post.desc }} </i></p>
                   {% elsif post.dec == NIL %}
-                  <p> No description dis provided with the blog </p>
+                  <p> <i> No description dis provided with the blog </i>  </p>
                   {% endif %}
 
                   {% if post.time != NIL %}
-                  <p style ="text-align: right;"> <small> {{ post.time }} minute read.  </small></p>
+                  <p style="text-align: left;"><small> {{ post.time }} minute read.  </small></p>
                   {% elsif post.time == NIL %}
-                  <p style ="text-align: right;"> <small> < 10 minute read.  </small></p>
+                  <p style="text-align: left;"><small> Less than 10 minute read.  </small></p>
                   {% endif %}
-
-                  {% if forloop.index == 5 %}
-                  {% break %}
-                  {% endif %}
+                  <!-- hr style="width=10px;border-top: 1px solid black;" -->
                 </div>
+              </div>
+              <!-- Media Object Finished -->
             </div>
-            <hr>
+            {% if forloop.index ==5 %}
+            {% break %}
+            {% endif %}
             {% endfor %}
-            <!-- Media Object Finished -->
-            <a href="{{ "/blog.html" | relative_url }}" class="btn btn-primary">View all the blogs </a>
           </div>
-        </div>
       </div>
       <div class="col-sm-4">
         <a class="twitter-timeline" href="https://twitter.com/dhrubokamal07?ref_src=twsrc%5Etfw" data-height="800">Tweets by dhrubokamal07</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
-
   </div>
+
   <div class="buffer" style="height: 5rem;"></div>
   <!-- Blog ends -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4" style="padding: 10px;">
+        <img class="resp-img" src="{{ "/assets/contact me.png" }}" alt="">
+      </div>
+      <div class="col-sm-4" style="padding: 10px;">
+        <h5> Contact Information! </h5>
+        <p> mmkdhrubo@gmail.com </br> 1805032@ugrad.cse.buet.ac.bd	<br>
+        Cellphone: +8801685013593 </p> </br>
+        <h5> Follow me on Social Media </h5> </br>
+        <a href="https://www.facebook.com/mmk.dhrubo" target="_blank">  <img src= "{{ "/assets/fb.png" | relative_url}}"  alt="" width="30px" height="30px" style="margin:8px;"> </a>
+        <a href="https://www.linkedin.com/in/mmkdhrubo/" target="_blank"> <img src="{{ "/assets/li.png" | relative_url}}" alt="" width="30px" height="30px" style="margin:8px;"> </a>
+        <a href="https://www.youtube.com/channel/UCendCII-donK3yVKNIy3LFg" target="_blank"> <img src="{{ "/assets/yt.png" | relative_url}}" alt="" width="30px" height="30px" style="margin:8px";></a>
+        <a href="https://github.com/DhruboKamal" target="_blank"> <img src="{{ "/assets/gh.png" | relative_url}}" alt="" width="30px" height="30px" style="margin:8px;"> </a>
+        <a href="https://twitter.com/dhrubokamal07" target="_blank">  <img src="{{ "/assets/tw.png" | relative_url}}" alt="" width="30px" height="30px" style="margin:8px;"> </a>
+        <br>
+      </div>
+      <div class="col-sm-4" style="padding: 10px;">
+        <h5> Address: </h5>
+        <p> House no: 443/A, Road no 6, SOnadanga 2nd Phase, Khulna. </br> Present Address: Ahsanullah Hall, BUET. </br></p> </br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.62188149032!2d90.39033211506577!3d23.72519328460186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8dd7107748b%3A0xc5d2b8f7501fcf!2sAhsanullah%20Hall!5e0!3m2!1sen!2sbd!4v1596469775215!5m2!1sen!2sbd" frameborder="0" style="width:80%; border:0; wi" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

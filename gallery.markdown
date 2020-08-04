@@ -23,7 +23,7 @@ images:
     <div class="container" style="display: flex; flex-wrap: wrap; justify-content: center">
 
         {% for image in page.images %}
-              <img style="display: block;max-width:320px;max-height:240px;width: auto; height: auto; margin:10px;" src=" {{ "image.image_path" | relative_url}}" alt="...">
+              <img style="display: block;max-width:320px;max-height:240px;width: auto; height: auto; margin:10px;" src=" {{ image.image_path | relative_url}}" alt="...">
         {% endfor %}
 
     </div>

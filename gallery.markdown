@@ -3,13 +3,13 @@ layout: page
 title: Gallery
 permalink: /gallery/
 images:
-  - image_path: /assets/glr001.jpg
+  - image_path: assets/glr001.jpg
     title: img
-  - image_path: /assets/glr002.jpg
+  - image_path: assets/glr002.jpg
     title: img
-  - image_path: /assets/glr003.jpg
+  - image_path: assets/glr003.jpg
     title: img
-  - image_path: /assets/glr004.jpg
+  - image_path: assets/glr004.jpg
     title: img
   - image_path: /assets/glr005.jpg
     title: img

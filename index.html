@@ -121,7 +121,7 @@ layout: default
             <div class="media">
               <a href="{{ post.url | relative_url }}"> <img src={{ "assets/thumbnail.jpg" | relative_url }} class="mr-3 rounded-circle" alt="Sample Image" height="80px" width="80px"> <a>
                 <div class="media-body">
-                  <h5 class="mt-0"> <a href="{{ post.url | relative_url}}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small> </h5>
+                  <h5 class="mt-0"> <a href="{{ post.url | relative_url}}"> {{ post.title }} </a> <small><i>Posted on {{ page.date | date: "%-d %B %Y"}} </i></small> </h5>
                   {% if post.desc != NIL %}
                   <p> <i> {{ post.desc }} </i></p>
                   {% elsif post.dec == NIL %}
@@ -156,7 +156,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-sm-4" style="padding: 10px;">
-        <img class="resp-img" src="{{ "/assets/contact me.png" }}" alt="">
+        <img class="resp-img" src="{{ "/assets/contact me.png" | relative_url }}" alt="">
       </div>
       <div class="col-sm-4" style="padding: 10px;">
         <h5> Contact Information! </h5>

@@ -37,6 +37,7 @@ layout: default
     <div class="container">
         <div class="card">
             {% for post in site.posts %}
+
             <div class="card-body">
                 <!-- Media Object Starts -->
                 <div class="media">
@@ -44,7 +45,7 @@ layout: default
                     <a href="{{ post.url | relative_url }}"> <img src={{ "assets/thumbnail.jpg" | relative_url }} class="mr-3 rounded-circle" alt="Sample Image" height="80px" width="80px"> <a>
 
                     <div class="media-body">
-                        <h5 class="mt-0"> <a href="{{ post.url | relative_url}}"> {{ post.title }} </a> <small><i>Posted on {{ post.date }} </i></small> </h5>
+                        <h5 class="mt-0"> <a href="{{ post.url | relative_url}}"> {{ post.title }} </a> <small><i>Posted on {{ page.date | date: "%-d %B %Y"}} </i></small> </h5>
                         {% if post.desc != NIL %}
                         <p> <i> {{ post.desc }} </i></p>
                         {% elsif post.dec == NIL %}

@@ -1,4 +1,10 @@
 title: Official site of Dhrubo Kamal
 email: mmkdhrubo@gmail.com
+
+#paginate: 3
+#paginate_path: "_posts/page:num/"
 #baseurl: "home"
 #url: "https://dhrubokamal.github.io/home"
+
+# Gems
+#gems: [jekyll-paginate, jekyll-coffeescript, jekyll-watch, jekyll-assets]

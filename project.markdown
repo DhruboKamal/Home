@@ -33,10 +33,6 @@ permalink: /projects/
 
 <p> Github contributions of <a href="https://github.com/DhruboKamal"> DhruboKamal </a> (Mahdee Mushfique Kamal)  last year: <br> </p>
 
-<img src="http://ghchart.rshah.org/DhruboKamal" alt="Name Your GitHub chart">
-<br>
-<br>
-
 <div class="calendar">
     <!-- Loading stuff -->
     Loading the data just for you.

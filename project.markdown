@@ -3,6 +3,19 @@ layout: page
 title: Academic and Venture Projects
 permalink: /projects/
 ---
+<head>
+<!-- Include the library. -->
+<script
+  src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
+/>
+
+</head>
 <h1> Term Projects </h1>
 <h4> Diamond Rush </h4>
 <p>
@@ -23,3 +36,13 @@ permalink: /projects/
 <img src="http://ghchart.rshah.org/DhruboKamal" alt="Name Your GitHub chart">
 <br>
 <br>
+
+<div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+
+<script>
+  // or enable responsive functionality:
+  GitHubCalendar(".calendar", "DhruboKamal", { responsive: true });
+</script>

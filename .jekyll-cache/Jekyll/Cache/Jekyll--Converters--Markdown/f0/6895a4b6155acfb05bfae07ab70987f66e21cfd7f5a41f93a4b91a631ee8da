@@ -1,4 +1,13 @@
-I"�<h1> Term Projects </h1>
+I"�<head>
+<!-- Include the library. -->
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+
+<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+</head>
+<h1> Term Projects </h1>
 <h4> Diamond Rush </h4>
 <p>
     <b> CSE 102 </b> (c-project) : An classical Nokia adventure game remade with an OpenGL wrapper igraphics library. It includes features like <i>“New Game”, “Save game”, ”Load Game”, ”Hall of fame”.</i> (2019)
@@ -18,4 +27,15 @@
 <p><img src="http://ghchart.rshah.org/DhruboKamal" alt="Name Your GitHub chart" />
 <br />
 <br /></p>
+
+<div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+</div>
+
+<script>
+  // or enable responsive functionality:
+  GitHubCalendar(".calendar", "DhruboKamal", { responsive: true });
+</script>
+
 :ET

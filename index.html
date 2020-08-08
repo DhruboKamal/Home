@@ -8,7 +8,7 @@ layout: default
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <title>Site of Dhrubo Kamal</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@ layout: default
       background-size: cover;
     }
     .landing-text{
-      padding-bottom: 0%;
+      /*padding-left: 40%; */
       display: table-cell;
       text-align: center;
       vertical-align: middle;
@@ -43,6 +43,28 @@ layout: default
     }
     .landing-text h1{
       font-size: 200%;
+    }
+    .typewriter h1 {
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      /*border-right: .15em solid orange;  The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em; /* Adjust as needed */
+      animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
     }
     #fixed{
       background:url({{"/assets/cover2.jpg" | relative_url }}) no-repeat center bottom fixed;
@@ -62,7 +84,10 @@ layout: default
   <div id="home">
     <div class="landing-text">
       <h5>Hello & welcome</h5>
-      <h1> I'm <b>Mahdee Mushfique Kamal</b>. </h1>
+      <div class="typewriter">
+        <h1> I'm <b>Mahdee Mushfique Kamal</b>.</h1>
+      </div>
+
       <br>
       <a href="{{"/assets/MMK-CV.pdf" | relative_url}}" class="btn btn-default btn-lg" style="color:white ;border-color: white ;border-width:2px; border-radius: 50px"> Download CV </a>
       </br>
